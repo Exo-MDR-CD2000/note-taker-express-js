@@ -11,32 +11,28 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const {v4: uuidv4} = require('uuid');
+const { v4: uuidv4 } = require('uuid');
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-
 // middlware for parsing JSON and urlencoded form data
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 //app.use('/api', apiRoutes);
-
 
 // middleware for serving static files
 app.use(express.static('public'));
 
 // define routes below
 
-
-
-
-
-
+app.get('/', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 
 // start the server on the port
 
 app.listen(PORT, () => {
-    console.log(`API server running on port ${PORT}!`)
+  console.log(`API server running on port ${PORT}!`);
 });
