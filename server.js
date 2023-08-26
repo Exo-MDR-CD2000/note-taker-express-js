@@ -20,7 +20,7 @@ const app = express();
 // middlware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-//app.use('/api', apiRoutes); // this will be defined when I get to the routes folder
+//app.use('/api', combinedRoutes); // this will be defined when I get to the routes folder
 
 // middleware for serving static files
 app.use(express.static('public'));
