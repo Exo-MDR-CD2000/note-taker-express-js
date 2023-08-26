@@ -11,7 +11,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+//const { v4: uuidv4 } = require('uuid');
 
 const PORT = process.env.PORT || 3001;
 
@@ -25,7 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 // middleware for serving static files
 app.use(express.static('public'));
 
-// define routes below
+// define routes below for HTML files
 
 app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
@@ -43,3 +43,5 @@ app.listen(PORT, () => {
 
 // I believe these are the two main routes for this app. I can view the index.html file and the notes.html file in insomnia so
 // now I need to write the other routes.
+
+//note that this server file does not define the routes for the api. This file is purely for starting the server and defining the routes for the html files.
