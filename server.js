@@ -20,7 +20,7 @@ const app = express();
 // middlware for parsing JSON and urlencoded form data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-//app.use('/api', apiRoutes);
+//app.use('/api', apiRoutes); // this will be defined when I get to the routes folder
 
 // middleware for serving static files
 app.use(express.static('public'));
@@ -31,8 +31,15 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
+app.get('/notes', (req, res) =>
+res.sendFile(path.join(__dirname, '/public/notes.html'))
+);
+
 // start the server on the port
 
 app.listen(PORT, () => {
-  console.log(`API server running on port ${PORT}!`);
+  console.log(`API server running on port http://localhost:${PORT}`);
 });
+
+// I believe these are the two main routes for this app. I can view the index.html file and the notes.html file in insomnia so
+// now I need to write the other routes.
