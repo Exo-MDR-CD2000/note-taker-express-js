@@ -22,6 +22,50 @@ const existingNotes = require('./getNotes');
 // now I need to deconstruct the json data, add a unique id to the note, then add the new note to the existing notes.
 
 
+saveNotes.post('/', (req, res) => {
+    
+    const { title, text } = req.body;
+
+    if (title && text) {
+        
+        const newNote = {
+            title,
+            text,
+            noteId: uuidv4()
+        };
+
+        existingNotes.push(newNote);
+
+        fs.writeFile('./db/db.json', JSON.stringify(existingNotes), (err) => {
+            if (err) throw err;
+            console.log('Note added!');
+        });
+
+        const response = {
+            status: 'success',
+            body: newNote
+        };
+
+        res.json(response);
+
+    } else {
+        const response = {
+            status: 'error',
+            message: 'Please provide a title and text for the note.'
+        };
+
+        res.status(400).json(response);
+    }
+});
+
+//function above not working. Wait until Monday to ask for help.
+
+module.exports = saveNotes;
+
+
+
+
+
 // saveNotes.post('/', (req, res) => {
     
 //     const { title, text } = req.body;
@@ -49,42 +93,3 @@ const existingNotes = require('./getNotes');
 //         res.json('Error in posting note');
 //     }
 // });
-
-
-saveNotes.post('/', (req, res) => {
-    
-    const { title, text } = req.body;
-
-    if (title && text) {
-        
-        const newNote = {
-            title,
-            text,
-            noteId: uuidv4()
-        };
-
-        notesData.push(newNote);
-
-        fs.writeFile('./db/db.json', JSON.stringify(existingNotes), (err) => {
-            if (err) throw err;
-            console.log('Note added!');
-        });
-
-        const response = {
-            status: 'success',
-            body: newNote
-        };
-
-        res.json(response);
-
-    } else {
-        const response = {
-            status: 'error',
-            message: 'Please provide a title and text for the note.'
-        };
-
-        res.status(400).json(response);
-    }
-});
-
-module.exports = saveNotes;
