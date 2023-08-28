@@ -7,7 +7,7 @@ const express = require('express');
 //then the imported modular routes from the seperate files.
 
 const getNotesRouter = require('./getNotes');
-// const saveNotesRouter = require('./saveNotes');
+const saveNotesRouter = require('./saveNotes');
 // const deleteNotesRouter = require('./deleteNotes');
 
 const app = express();
@@ -15,7 +15,7 @@ const app = express();
 // then some middleware from the other files.
 
 app.use('/getNotes', getNotesRouter);
-// app.use('/saveNotes', saveNotesRouter);
+app.use('/saveNotes', saveNotesRouter);
 // app.use('/deleteNotes', deleteNotesRouter);
 
 module.exports = app;
