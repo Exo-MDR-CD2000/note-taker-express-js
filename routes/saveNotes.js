@@ -22,6 +22,35 @@ const existingNotes = require('./getNotes');
 // now I need to deconstruct the json data, add a unique id to the note, then add the new note to the existing notes.
 
 
+// saveNotes.post('/', (req, res) => {
+    
+//     const { title, text } = req.body;
+
+//     if (title && text) {
+        
+//         const newNote = {
+//             title,
+//             text,
+//             noteId: uuidv4()
+//         };
+
+//         fs.writeFile('./db/db.json', JSON.stringify(newNote), (err) => {
+//             if (err) throw err;
+//             console.log('Note added!');
+//         });
+
+//         const response = {
+//             status: 'success',
+//             body: newNote,
+//         };
+
+//         res.json(response);
+//     } else {
+//         res.json('Error in posting note');
+//     }
+// });
+
+
 saveNotes.post('/', (req, res) => {
     
     const { title, text } = req.body;
@@ -34,18 +63,28 @@ saveNotes.post('/', (req, res) => {
             noteId: uuidv4()
         };
 
-        fs.writeFile('./db/db.json', JSON.stringify(newNote), (err) => {
+        notesData.push(newNote);
+
+        fs.writeFile('./db/db.json', JSON.stringify(existingNotes), (err) => {
             if (err) throw err;
             console.log('Note added!');
         });
 
         const response = {
             status: 'success',
-            body: newNote,
+            body: newNote
         };
 
         res.json(response);
+
     } else {
-        res.json('Error in posting note');
+        const response = {
+            status: 'error',
+            message: 'Please provide a title and text for the note.'
+        };
+
+        res.status(400).json(response);
     }
 });
+
+module.exports = saveNotes;
