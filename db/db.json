@@ -1,42 +1,17 @@
 [
   {
-    "title": "Test Title",
-    "text": "Test text 123",
-    "noteId": "eb1f2bb8-d51e-4b8c-a6a0-bef2c16ee497"
+    "title": "Slecting",
+    "text": "Selecting note functionality works using the GET method for routing\n",
+    "id": "93d8872a-6f16-432a-ae11-ca3721ace465"
   },
   {
-    "title": "Test Title 3",
-    "text": "Test text 123 2121 2",
-    "noteId": "23de0614-3eb9-4e18-91e8-428bcd9f7f90"
+    "title": "Saving",
+    "text": "Saving notes work using the POST method for routing. Unique id's are assigned here as well.",
+    "id": "c8df4ab7-0d14-4b40-8fe4-c29df9f8ff3d"
   },
   {
-    "title": "Test Title  fdassdfa sdf3",
-    "text": "Test text 123 2121 2",
-    "noteId": "4b5a9237-22d7-4b0a-b464-ade0735a2476"
-  },
-  {
-    "title": "Test Title  fdassdfa sdf3 asdf asdf HI THERE!!!!",
-    "text": "Test text 123 2121 2",
-    "noteId": "1a5f8f14-4c27-4cc3-ad28-82242aafc035"
-  },
-  {
-    "title": "Testing of space indenting on JSON array",
-    "text": "Test text 123 2121 2",
-    "noteId": "4839af34-9866-4842-a02d-545619c77d08"
-  },
-  {
-    "title": "asdfas",
-    "text": "dfasdfasdf",
-    "noteId": "c1a900e1-3e72-4835-abdc-97d362c994f4"
-  },
-  {
-    "title": "asdf",
-    "text": "asdf",
-    "noteId": "3cc1caf8-757b-4908-8d63-c529814eaea6"
-  },
-  {
-    "title": "New Issue",
-    "text": "Why can i not select the notes fro the left hand side?",
-    "noteId": "ec3fd0d9-0fad-4b14-ad4f-dc871cee629d"
+    "title": "Deleting",
+    "text": "Deleting notes also work using the DELETE method for routes. The code searches for that particular id and deletes the note. I had a slight issue where deleting a note would delete the entire JSON array but that was fixed.",
+    "id": "27d8bc66-8cf6-47c8-869f-67790768e177"
   }
 ]

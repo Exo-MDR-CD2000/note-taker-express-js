@@ -15,7 +15,7 @@ getNotes.get('/', (req, res) => { // this should retrieve the notes from the db.
 getNotes.get('/:id', (req, res) => {
   const data = fs.readFileSync('./db/db.json', 'utf8');
   const notes = JSON.parse(data);
-  const note = notes.find((n) => n.noteId === req.params.noteId);
+  const note = notes.find((n) => n.id === req.params.id);
   res.json(note);
 }); // this should retrieve a single note from the db.json file.
 
