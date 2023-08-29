@@ -16,10 +16,10 @@ const existingNotes = require('./getNotes');
 
 //let's retrieve the notes from the db.json file.
 
-saveNotes.get('/', (req, res) => {
-    const data = fs.readFileSync('./db/db.json', 'utf8');
-    res.json(JSON.parse(data));
-});
+// saveNotes.get('/', (req, res) => {
+//     const data = fs.readFileSync('./db/db.json', 'utf8');
+//     res.json(JSON.parse(data));
+// });
 
 
 //TODO: use the paths defined in the index.js file and it should make the front end work.
@@ -36,7 +36,7 @@ saveNotes.post('/', (req, res) => {
         const newNote = {
             title,
             text,
-            noteId: uuidv4()
+            id: uuidv4()
         };
 
         const notesData = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));

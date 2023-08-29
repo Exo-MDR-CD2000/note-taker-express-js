@@ -8,7 +8,7 @@ const express = require('express');
 
 const getNotesRouter = require('./getNotes');
 const saveNotesRouter = require('./saveNotes');
-// const deleteNotesRouter = require('./deleteNotes');
+const deleteNotesRouter = require('./deleteNotes');
 
 const app = express();
 
@@ -16,7 +16,7 @@ const app = express();
 
 app.use('/notes', getNotesRouter);
 app.use('/notes', saveNotesRouter);
-// app.use('/deleteNotes', deleteNotesRouter);
+app.use('/notes', deleteNotesRouter);
 
 module.exports = app;
 

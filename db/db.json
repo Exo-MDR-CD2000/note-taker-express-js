@@ -1,10 +1,6 @@
 [
   {
     "title": "Test Title",
-    "text": "Test text"
-  },
-  {
-    "title": "Test Title",
     "text": "Test text 123",
     "noteId": "eb1f2bb8-d51e-4b8c-a6a0-bef2c16ee497"
   },
@@ -27,5 +23,20 @@
     "title": "Testing of space indenting on JSON array",
     "text": "Test text 123 2121 2",
     "noteId": "4839af34-9866-4842-a02d-545619c77d08"
+  },
+  {
+    "title": "asdfas",
+    "text": "dfasdfasdf",
+    "noteId": "c1a900e1-3e72-4835-abdc-97d362c994f4"
+  },
+  {
+    "title": "asdf",
+    "text": "asdf",
+    "noteId": "3cc1caf8-757b-4908-8d63-c529814eaea6"
+  },
+  {
+    "title": "New Issue",
+    "text": "Why can i not select the notes fro the left hand side?",
+    "noteId": "ec3fd0d9-0fad-4b14-ad4f-dc871cee629d"
   }
 ]

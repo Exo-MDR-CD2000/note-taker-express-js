@@ -1,7 +1,7 @@
 //define the GET route for retrieving notes. // let's just make this file retrieve the notes from the db.json file.
 
 const getNotes = require('express').Router();
-//const { v4: uuidv4 } = require("uuid"); 
+const { v4: uuidv4 } = require("uuid"); 
 const fs = require('fs');
 const path = require('path');
 
@@ -12,6 +12,12 @@ getNotes.get('/', (req, res) => { // this should retrieve the notes from the db.
 
 
 
+getNotes.get('/:id', (req, res) => {
+  const data = fs.readFileSync('./db/db.json', 'utf8');
+  const notes = JSON.parse(data);
+  const note = notes.find((n) => n.noteId === req.params.noteId);
+  res.json(note);
+}); // this should retrieve a single note from the db.json file.
 
 //TODO: Determine if error logging is needed for this route. Best to wait after the POST route is working.
 
