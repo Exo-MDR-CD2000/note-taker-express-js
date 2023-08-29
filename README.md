@@ -8,7 +8,7 @@ The task was to develop the back end for a web application that allows a user to
 No need to install anything. Click on the Heroku link to test the web app [here](https://salty-woodland-16724-986854b4d809.herokuapp.com/).
 
 ## Usage
-Type in a title for the note and the content for the note. Save the note by clikcking on the floppy disk icon on the top right corner of the screen. The notes will then be displayed on the left hand side.
+Type in a title for the note and the content for the note. Save the note by clicking on the floppy disk icon on the top right corner of the screen. The notes will then be displayed on the left hand side.
 
 
 ## Credits
