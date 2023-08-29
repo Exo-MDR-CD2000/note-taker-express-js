@@ -19,21 +19,7 @@ getNotes.get('/:id', (req, res) => {
   res.json(note);
 }); // this should retrieve a single note from the db.json file.
 
-//TODO: Determine if error logging is needed for this route. Best to wait after the POST route is working.
 
-
-
-// getNotes.get('/', (req, res) => {
-//     const notes = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'db', 'db.json')));
-//     res.json(JSON.parse(notes));
-//   });
-  
-
-// getNotes.get('/', (req, res) => {
-//     fs.readFromFile('./db/db.json', 'utf8').then((data) => 
-//     res.json(JSON.parse(data))
-//     );
-// });
 
 
 module.exports = getNotes;

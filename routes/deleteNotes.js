@@ -7,20 +7,6 @@ const { v4: uuidv4 } = require("uuid");
 
 
 
-
-
-
-
-
-// deleteNotes.get('/:id', (req, res) => {
-//     const data = fs.readFileSync('./db/db.json', 'utf8');
-//     const notes = JSON.parse(data);
-//     const note = notes.find((n) => n.noteId === req.params.noteId);
-//     res.json(note);
-//   }); // this should retrieve a single note from the db.json file.
-  
-  
-
   deleteNotes.delete('/:id', (req, res) => {
     const data = fs.readFileSync('./db/db.json', 'utf8');
     const notes = JSON.parse(data);

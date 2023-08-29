@@ -6,12 +6,8 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require("uuid");
 const existingNotes = require('./getNotes');
-// the mini project didn't bring in code from other files besides the main route file.
 
 
-
-
-//forgot to import the getNotes route.
 
 
 //let's retrieve the notes from the db.json file.
@@ -64,79 +60,7 @@ saveNotes.post('/', (req, res) => {
     }
 });
 
-// the code works but it is not being shown on the front end. I can add notes in manuallyu through the POST method in insomnia but it is not being shown on the front end.
+
 
 module.exports = saveNotes;
-//function above not working. Wait until Monday to ask for help.
 
-
-
-
-
-
-// saveNotes.post('/', (req, res) => {
-    
-//     const { title, text } = req.body;
-
-//     if (title && text) {
-        
-//         const newNote = {
-//             title,
-//             text,
-//             noteId: uuidv4()
-//         };
-
-//         fs.writeFile('./db/db.json', JSON.stringify(newNote), (err) => {
-//             if (err) throw err;
-//             console.log('Note added!');
-//         });
-
-//         const response = {
-//             status: 'success',
-//             body: newNote,
-//         };
-
-//         res.json(response);
-//     } else {
-//         res.json('Error in posting note');
-//     }
-// });
-
-
-
-// saveNotes.post('/', (req, res) => {
-//     console.log(req.body);
-    
-//     const { title, text } = req.body;
-
-//     if (title && text) {
-        
-//         const newNote = {
-//             title,
-//             text,
-//             noteId: uuidv4()
-//         };
-
-//         existingNotes.push(newNote);
-
-//         fs.writeFile('./db/db.json', JSON.stringify(existingNotes), (err) => {
-//             if (err) throw err;
-//             console.log('Note added!');
-//         });
-
-//         const response = {
-//             status: 'success',
-//             body: newNote
-//         };
-
-//         res.json(response);
-
-//     } else {
-//         const response = {
-//             status: 'error',
-//             message: 'Please provide a title and text for the note.'
-//         };
-
-//         res.status(400).json(response);
-//     }
-// });
