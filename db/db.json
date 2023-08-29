@@ -1,5 +1,8 @@
 [
-  { "title": "Test Title", "text": "Test text" },
+  {
+    "title": "Test Title",
+    "text": "Test text"
+  },
   {
     "title": "Test Title",
     "text": "Test text 123",
@@ -19,5 +22,10 @@
     "title": "Test Title  fdassdfa sdf3 asdf asdf HI THERE!!!!",
     "text": "Test text 123 2121 2",
     "noteId": "1a5f8f14-4c27-4cc3-ad28-82242aafc035"
+  },
+  {
+    "title": "Testing of space indenting on JSON array",
+    "text": "Test text 123 2121 2",
+    "noteId": "4839af34-9866-4842-a02d-545619c77d08"
   }
 ]

@@ -42,7 +42,7 @@ saveNotes.post('/', (req, res) => {
         const notesData = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
         notesData.push(newNote);
 
-        fs.writeFile('./db/db.json', JSON.stringify(notesData), (err) => {
+        fs.writeFile('./db/db.json', JSON.stringify(notesData, null, 2), (err) => { // the null, 2 is for formatting the json data. The null is for the replacer parameter and the 2 is for the space parameter.
             if (err) throw err;
             console.log('Note added!');
         });
