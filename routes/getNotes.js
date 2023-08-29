@@ -1,9 +1,9 @@
 //define the GET route for retrieving notes. // let's just make this file retrieve the notes from the db.json file.
 
 const getNotes = require('express').Router();
-const { v4: uuidv4 } = require("uuid"); 
+// const { v4: uuidv4 } = require("uuid"); 
 const fs = require('fs');
-const path = require('path');
+// const path = require('path');
 
 getNotes.get('/', (req, res) => { // this should retrieve the notes from the db.json file.
   const data = fs.readFileSync('./db/db.json', 'utf8'); //readFileSync is a synchronous method that reads the contents of a file.

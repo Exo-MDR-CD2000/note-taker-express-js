@@ -3,9 +3,9 @@
 const saveNotes = require('express').Router();
 
 const fs = require('fs');
-const path = require('path');
+// const path = require('path');
 const { v4: uuidv4 } = require("uuid");
-const existingNotes = require('./getNotes');
+// const existingNotes = require('./getNotes');
 
 
 
