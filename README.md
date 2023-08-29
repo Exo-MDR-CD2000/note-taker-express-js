@@ -7,6 +7,7 @@ The task was to develop the back end for a web application that allows a user to
 ## Installation
 
 ## Usage
+Type in a title for the note and the content for the note. Save the note by clikcking on the floppy disk icon on the top right corner of the screen. The notes will then be displayed on the left hand side.
 
 
 ## Credits
