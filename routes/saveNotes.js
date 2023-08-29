@@ -22,6 +22,8 @@ saveNotes.get('/', (req, res) => {
 });
 
 
+//TODO: use the paths defined in the index.js file and it should make the front end work.
+
 // now I need to deconstruct the json data, add a unique id to the note, then add the new note to the existing notes.
 
 
@@ -62,7 +64,7 @@ saveNotes.post('/', (req, res) => {
     }
 });
 
-// the code works but it is not being shown on the front end. I need to figure out how to get the notes to show up on the front end.
+// the code works but it is not being shown on the front end. I can add notes in manuallyu through the POST method in insomnia but it is not being shown on the front end.
 
 module.exports = saveNotes;
 //function above not working. Wait until Monday to ask for help.

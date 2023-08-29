@@ -14,8 +14,8 @@ const app = express();
 
 // then some middleware from the other files.
 
-app.use('/getNotes', getNotesRouter);
-app.use('/saveNotes', saveNotesRouter);
+app.use('/notes', getNotesRouter);
+app.use('/notes', saveNotesRouter);
 // app.use('/deleteNotes', deleteNotesRouter);
 
 module.exports = app;
